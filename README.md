@@ -1,3 +1,11 @@
 # voting
 Voting process
-Magbranch na lang sa mainline repo
+
+Function names:  
+showList()  
+submit()  
+validate()  
+sanitize()  
+isValidCandidate()  
+isValidVote()  
+isLegitUser()  
