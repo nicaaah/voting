@@ -1,23 +1,17 @@
-<?php
-	$dbhost = "localhost";
-	$dbuser = "root";
-	$dbpass = "";
-	$db = "test";
-//	$conn = mysqli_connect($dbhost, $dbuser, $dbpass,$db);
-	if (isset($_POST['submit']))
-		{
-			// if(isset($_POST['pres'])){
-			// 	echo $_POST['pres'];
-			// }
-//            $nem = $_POST['name'];
-//            $emel = $_POST['email'];
-//            $pas = $_POST['pass'];
-//            $rpas = $_POST['re_pass'];
-				                
-//			echo $nem, $emel, $pas, $rpas;
-			
-//			mysqli_query($conn,"INSERT INTO `vote_summary` (`vote_log_id`, `student_id`, `candidate_id`, `status`, `time_stamp`) VALUES (NULL, '55', '1', 'Voted', CURRENT_TIMESTAMP)");
-			
-//			echo $nem, $emel, $pas, $rpas;
-		}
-    ?>
+<?php  
+    function vtSubmit(){
+        $pos_id = 10;
+        if (isset($_POST['submit'])){
+            if(!empty($_POST[$pos_id])){
+                echo "<br>Voted: <br>";
+                while($pos_id < 40){
+                    echo "Position $pos_id: ", $_POST[$pos_id], "<br>";
+                    $pos_id+=10;
+                }
+            }
+            else{
+                echo "none";
+            }
+        }
+    }
+?>

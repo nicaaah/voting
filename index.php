@@ -23,8 +23,17 @@
 				<form method="POST" action = "index.php" class="register-form" id="register-form">
 				  	<div class="form-group">
 						<?php
-						showInfo();
-						vtSubmit();
+							$dbhost = "localhost";
+							$dbuser = "root";
+							$dbpass = "";
+							$db = "test";
+							$conn = mysqli_connect($dbhost, $dbuser, $dbpass,$db);
+							if ($conn->connect_error) {
+								die("Connection to database failed: ". $conn->connect_error);
+							}
+							showInfo($conn);
+							vtSubmit();
+							$conn->close();
 						?>
 				  </div>
 					<div class="form-group form-button">
@@ -39,33 +48,17 @@
     <!-- PHP -->
 <!--<?php include 'php/submit.php';?>-->
 	<?php
-		$dbhost = "localhost";
-		$dbuser = "root";
-		$dbpass = "";
-		$db = "test";
-		$conn = mysqli_connect($dbhost, $dbuser, $dbpass,$db);
-		$candidates = array(1, 1);
-		$canCtr = 0;
-		function showInfo(){
-			$pos_id = 10;
-			while($pos_id < 40){
-				$can_nm = 1; //var that stores candidate id that is voted
-				echo "<section class='Position' id='Pos'> Position ", $pos_id;
-					echo '<table>';
-						echo '<tr>';
-						while($can_nm < 4){
-							echo "<td><div class='Candidate'><input required type='radio' name='$pos_id' class='agree-term' value = '$can_nm'/> Candidate $can_nm </div></td>";
-							$candidates[$canCtr][$pos_id] = $can_nm;
-							$can_nm++;
-							$canCtr++;
-						}
-						echo '</tr>';
-					echo '</table>';
-				echo '</section>';
-				$pos_id+=10;
+		
+		function showInfo($conn){
+			$sql = "SELECT * FROM candidate WHERE position_id = 90";
+			$pos_result = $conn->query($sql);
+			// echo $result;
+			while($cand = $pos_result->fetch_assoc()) {
+				$stud = "SELECT * FROM student WHERE student_id = $cand[student_id]";
+				echo $cand["candidate_id"]. " - stud id: " . $cand["student_id"]. " position" . $cand["position_id"]. " party" . $cand["party_name"]. "<br>";
 			}
 		}
-
+		
 		function vtSubmit(){
 			$pos_id = 10;
 			if (isset($_POST['submit'])){
@@ -81,23 +74,27 @@
 				}
 			}
 		}
-
+		
 		function validate(){
-			isValidCandidate();
-			isValidVote();
-			isLegitUser();
+			if(isValidCandidate() && isValidVote() && isLegitUser()){
+				return true;
+			}
+			else{
+				return false;
+			}
 		}
-
+		
 		function sanitize(){
+			return 1;
 		}
-
+		
 		function isValidCandidate(){
 			// $i = $canCtr;
 			// while($i>0){
-			// 	while($j<)
-			// 	if($candidates[$i][])
+				// 	while($j<)
+				// 	if($candidates[$i][])
+				// }
 			}
-		}
 	?>
     
 </body>
