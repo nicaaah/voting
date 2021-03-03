@@ -10,7 +10,7 @@
 
 
 
-	function testOutput($conn){
+	function testOutput($conn){ // for testing submit button
 		// $candidates = array(1, 1);
 		$canCtr = 0;
 		$pos_id = 10;
