@@ -5,7 +5,9 @@
 	echo "<td><div class='Candidate'><input required type='radio' name='$pos_id' class='agree-term' value = 'None' checked = 'checked'/> Abstain </div></td>"; // create abstain
 	while($cand = $pos_result->fetch_assoc()) {
 		$stud = "SELECT * FROM student WHERE student_id = $cand[student_id]";
-		echo $cand["candidate_id"]. " - stud id: " . $cand["student_id"]. " position" . $cand["position_id"]. " party" . $cand["party_name"]. "<br>";
+		echo "stud id: " . $cand["student_id"]. " position" . $cand["position_id"]. " party" . $cand["party_name"]. "<br>";
+		$can_nm = $cand["candidate_id"];
+		echo "<td><div class='Candidate'><input required type='radio' name='$pos_id' class='agree-term' value = '$can_nm'/> Candidate $can_nm </div></td>";
 	}
 
 
