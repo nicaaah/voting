@@ -1,13 +1,15 @@
 <?php
-	function showInfo($conn){
-		$sql = "SELECT * FROM candidate WHERE position_id = 90";
-		$pos_result = $conn->query($sql);
-		// echo $result;
-		while($cand = $pos_result->fetch_assoc()) {
-			$stud = "SELECT * FROM student WHERE student_id = $cand[student_id]";
-			echo $cand["candidate_id"]. " - stud id: " . $cand["student_id"]. " position" . $cand["position_id"]. " party" . $cand["party_name"]. "<br>";
-		}
+	$sql = "SELECT * FROM candidate WHERE position_id = 90";
+	$pos_result = $conn->query($sql);
+	// echo $result;
+	while($cand = $pos_result->fetch_assoc()) {
+		$stud = "SELECT * FROM student WHERE student_id = $cand[student_id]";
+		echo $cand["candidate_id"]. " - stud id: " . $cand["student_id"]. " position" . $cand["position_id"]. " party" . $cand["party_name"]. "<br>";
 	}
+
+
+
+
 	function testOutput($conn){
 		// $candidates = array(1, 1);
 		$canCtr = 0;
