@@ -27,9 +27,6 @@
 							include 'php/fetch.php';
 							include 'php/submit.php';
 							include 'php/security.php';
-
-							showInfo($conn);
-							vtSubmit();
 							$conn->close();
 						?>
 				  </div>
