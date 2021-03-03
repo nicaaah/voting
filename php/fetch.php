@@ -1,7 +1,8 @@
 <?php
-	$sql = "SELECT * FROM candidate WHERE position_id = 90";
+	$pos_id = 90;
+	$sql = "SELECT * FROM candidate WHERE position_id = $pos_id";
 	$pos_result = $conn->query($sql);
-	// echo $result;
+	echo "<td><div class='Candidate'><input required type='radio' name='$pos_id' class='agree-term' value = 'None' checked = 'checked'/> Abstain </div></td>"; // create abstain
 	while($cand = $pos_result->fetch_assoc()) {
 		$stud = "SELECT * FROM student WHERE student_id = $cand[student_id]";
 		echo $cand["candidate_id"]. " - stud id: " . $cand["student_id"]. " position" . $cand["position_id"]. " party" . $cand["party_name"]. "<br>";
