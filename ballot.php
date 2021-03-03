@@ -20,7 +20,7 @@
         <section class="signup">
             <div class="container">
 				<h2 class="form-title">Vote</h2>
-				<form method="POST" action = "index.php" class="register-form" id="register-form">
+				<form method="POST" action = "ballot.php" class="register-form" id="register-form">
 				  	<div class="form-group">
 					  	<?php 
 						  	include 'php/connect.php';
