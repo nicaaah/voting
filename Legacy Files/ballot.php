@@ -24,7 +24,7 @@
 				  	<div class="form-group">
 					  	<?php 
 						  	include 'php/connect.php';
-							include 'php/fetch.php';
+							include 'php/generateBallot.php';
 							include 'php/submit.php';
 							include 'php/security.php';
 							$conn->close();
