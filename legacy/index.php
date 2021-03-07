@@ -1,18 +1,18 @@
 <?php
-	include '../php/connect.php';
+	include 'php/connect.php';
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<link rel="icon" href="../img/buceils-logo.png" type="image/png"> 
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" href="img/buceils-logo.png" type="image/png"> 
 		<title>BUCEILS Vote</title>
 </head>
 
 <body>
 	<nav>
-		<img class="logo-pic" src="../img/buceils-logo.png">
+		<img class="logo-pic" src="img/buceils-logo.png">
 		<div class="logo">
 			<h1>BUCEILS HS</h1>
 			<p>ONLINE VOTING SYSTEM</p>
@@ -46,7 +46,7 @@
 			</li>
 
 			<li>
-				<a href="#"><img class="user-profile" src="../img/user.png"></a>
+				<a href="#"><img class="user-profile" src="img/user.png"></a>
 				<ul>
 					<li><a href="#">JUAN S. DELA CRUZ</a></li>
 					<li><a href="#">LOGOUT</a></li>
