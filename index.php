@@ -1,6 +1,3 @@
-<?php
-	include 'php/connect.php';
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,49 +8,9 @@
 </head>
 
 <body>
-	<nav>
-		<img class="logo-pic" src="img/buceils-logo.png">
-		<div class="logo">
-			<h1>BUCEILS HS</h1>
-			<p>ONLINE VOTING SYSTEM</p>
-		</div>
-		<ul>
-			<li>
-				<a class="topnav" href="#">VOTE</a>
-				<ul>
-					<li><a href="#">VOTE NOW</a></li>
-					<li><a href="#">RECIEPT</a></li>
-				</ul>
-			</li>
-
-			<li>
-				<a class="topnav" href="#">ABOUT</a>
-				<ul>
-					<li><a href="#">ELECTION PROCESS</a></li>
-					<li><a href="#">ARCHIVE</a></li>
-				</ul>
-			</li>
-
-			<li>
-				<a class="topnav" href="#">CANDIDATES</a>
-				<ul>
-					<li><a href="#">VIEW INFO</a></li>
-				</ul>
-			</li>
-
-			<li>
-				<a class="topnav" href="#">CHAT US</a>
-			</li>
-
-			<li>
-				<a href="#"><img class="user-profile" src="img/user.png"></a>
-				<ul>
-					<li><a href="#">JUAN S. DELA CRUZ</a></li>
-					<li><a href="#">LOGOUT</a></li>
-				</ul>
-			</li>
-		</ul>
-	</nav>
+	<?php
+		include 'html/navbar.html';
+	?>
 
   <header id="F-header" style="text-align:center"><b>STUDENT LEADER ELECTION</b></header><br>
 
@@ -66,8 +23,9 @@
 					<div class="candidate-box" style="order: 1;">
 							<div>
 								<?php
-									$pos_name = "Branch Manager";
-									$sql = "SELECT * FROM candidate_position WHERE position_name = '$pos_name'";
+									include 'php/connect.php';
+									$pos_id = "1";
+									$sql = "SELECT * FROM candidate_position WHERE position_id = '$pos_id'";
 									$query = $conn->query($sql);
 									while($row = $query->fetch_assoc()){
 										$sql = "SELECT * FROM candidate WHERE position_id='".$row['position_id']."'";
