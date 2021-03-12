@@ -14,6 +14,9 @@
 </head>
 
 <body>
+    <?php
+        include 'html/navbar.html';
+    ?>
 
     <header id="F-header" style="text-align:center"><b>STUDENT LEADER ELECTION</b></header><br>
 
@@ -31,7 +34,9 @@
      </main>
 
     <footer>
-        BS COMPUTER SCIENCE 3A © 2021
+        <div class="footer">
+        <p>BS COMPUTER SCIENCE 3A © 2021</p>
+        </div>
     </footer>
   
    
