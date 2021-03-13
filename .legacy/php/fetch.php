@@ -1,5 +1,4 @@
 <?php
-
 	// echo "Position: ". 
 	$pos_id = 90;
 	$pos_result = $conn->query("SELECT 'name' FROM candidate_position WHERE position_id = $pos_id");
