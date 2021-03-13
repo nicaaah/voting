@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
@@ -23,10 +23,10 @@
 				<form method="POST" action = "ballot.php" class="register-form" id="register-form">
 				  	<div class="form-group">
 					  	<?php 
-						  	include 'php/connect.php';
-							include 'php/fetch2.php';
-							include 'php/submit.php';
-							include 'php/security.php';
+						  	include 'connect.php';
+							include 'fetch2.php';
+							include 'submit.php';
+							include 'security.php';
 							$conn->close();
 						?>
 				  </div>
