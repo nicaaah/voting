@@ -1,6 +1,6 @@
 # voting
 Voting process
-Note: do not delete old files. Just Move them to legacy folder
+Note: Diretso na po kayo magedit ng files. Overwrite na lang yung existing. Kung magkamali, may history naman.
 
 Function names:  
 showList()  
