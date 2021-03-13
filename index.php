@@ -24,10 +24,11 @@
         <!--Candidates-->
         <div id="voting-page">
                <?php
-                      include 'php/fetch.php';
+                    include 'php/connect.php';
+                    include 'php/fetch.php';
                 ?>
                 <a href="#">
-                   <div id="vote-button"><button class="btn" >SUBMIT</button></div>
+                    <div id="vote-button"><button class="btn" >SUBMIT</button></div>
                 </a>
 
         </div>
