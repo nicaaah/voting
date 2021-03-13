@@ -24,7 +24,7 @@
                                    <label class="checkbox">
                                        <input type="radio" name="'.$poss["position_name"].'" id="vote">
                                        <span class="checkmark"></span>
-                                               <a href="#"><img src="#" class="candidate-photo" style="float: left; width: 100px; height: 100px;" alt="Candidate" ></a>
+                                               <a href="#"><img src="./img/doggie.jpg" class="candidate-photo" style="float: left; width: 100px; height: 100px;" alt="Candidate" ></a>
                                                <div class="candidate-info">';
             
                     // display candidate

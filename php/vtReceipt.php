@@ -43,6 +43,7 @@
 
       // When the user clicks the button, open the modal 
       confirmBtn.onclick = function() {
+      confirmModal.style.display = "none";
       modal.style.display = "block";
       }
 

@@ -76,7 +76,7 @@
 
       // When the user clicks on <span>, close the modal
       cancelBtn.onclick = function() {
-      modal.style.display = "none";
+      confirmModal.style.display = "none";
       }
 
       // When the user clicks anywhere outside of the modal, close it
