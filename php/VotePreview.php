@@ -13,7 +13,7 @@
   <body>
 
     <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Submit</button>
+    <!-- <button id="vote-button">Submit</button> -->
 
     <!-- The Modal -->
     <?php
@@ -25,7 +25,7 @@
       var modal = document.getElementById("myModal");               //first modal popup
 
       // Get the button that opens the modal
-      var btn = document.getElementById("myBtn");                   //submit button from Voting page(Rica)
+      var btn = document.getElementById("vote-button");                   //submit button from Voting page(Rica)
 
       // Get the <span> element that closes the modal
       var span = document.getElementsByClassName("F-returnBTN")[0];
