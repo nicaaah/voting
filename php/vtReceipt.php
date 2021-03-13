@@ -8,7 +8,7 @@
 
   <body>
     <!-- Trigger/Open The Modal -->
-    <button id="confirm">Confirm Submission</button>
+    <!-- <button id="confirm">Confirm Submission</button> -->
 
     <!-- The Modal -->
     <div id="receipt" class="F-modal">
