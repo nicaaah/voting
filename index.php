@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>BUCEILS HS Vote</title>
 </head>
@@ -32,10 +33,10 @@
         <!--Candidates-->
         <div id="voting-page">
                <?php
-                    include 'php/connect.php';
-                    include 'php/fetch.php';
+                    require 'php/connect.php';
+                    require 'php/fetch.php';
                     // include 'php/confirm.php'
-                    include 'votepreview.php';
+                    require 'php/votepreview.php';
                 ?>
                 <a href="#">
                     <div id="vote-button"><button class="btn" >SUBMIT</button></div>
@@ -49,33 +50,9 @@
         <p>BS COMPUTER SCIENCE 3A © 2021</p>
         </div>
     </footer>
-    <script>
-     // Get the modal
-      var modal = document.getElementById("myModal");               //first modal popup
-
-      // Get the button that opens the modal
-      var btn = document.getElementById("vote-button");                   //submit button from Voting page(Rica)
-
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("F-returnBTN")[0];
-
-      // When the user clicks the button, open the modal 
-      btn.onclick = function() {
-      modal.style.display = "block";
-      }
-
-      // When the user clicks on <span>, close the modal
-      span.onclick = function() {
-      modal.style.display = "none";
-      }
-
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      }
-    </script>
+    <?php
+        require 'js/vtModal.js';
+    ?>
 </body>
 
 </html>
