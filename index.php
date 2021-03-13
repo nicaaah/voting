@@ -10,15 +10,6 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <script src="js/bootstrap.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <title>BUCEILS HS Vote</title>
 </head>
 
@@ -35,8 +26,6 @@
                <?php
                     require 'php/connect.php';
                     require 'php/fetch.php';
-                    // include 'php/confirm.php'
-                    require 'php/votepreview.php';
                 ?>
                 <a href="#">
                     <div id="vote-button"><button class="btn" >SUBMIT</button></div>
@@ -51,7 +40,8 @@
         </div>
     </footer>
     <?php
-        require 'js/vtModal.js';
+        require 'php/vtPreview.php';
+        require 'php/vtReceipt.php';
     ?>
 </body>
 
