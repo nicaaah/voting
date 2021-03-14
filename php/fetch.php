@@ -13,8 +13,8 @@
                 $candidates = $conn->query("SELECT * FROM candidate INNER JOIN student ON candidate.student_id = student.student_id WHERE position_id = $pos_id");  // join tables for student and candidate
                 while($cand = $candidates->fetch_assoc()) { // loop through all candidates in a given position
                     
-                    $can_nm1 = $cand["candidate_id"];
-                    $can_nm2 = $cand["student_id"];
+                    $can_nm1 = $cand["fname"];
+                    $can_nm2 = $cand["lname"];
                     
                     echo '<div class="candidate-box" >';
                     echo '<div>
