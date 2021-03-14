@@ -1,4 +1,4 @@
-<?php  
+<?php
     if (isset($_POST['confSubmit'])){
         if(!empty($_POST[$pos_id])){
             echo "<br>Voted: <br>";
@@ -17,7 +17,8 @@
                 }
 
                 echo "Position $pos_nm: ", $fname, "<br>";
-                $pos_id-=10;
+                // $pos_id-=10;
+                $conn->query("UPDATE candidate SET total_votes = total_votes + 1 WHERE candidate.candidate_id = 124");
             }
         }
     }
