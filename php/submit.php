@@ -1,5 +1,5 @@
 <?php  
-    if (isset($_POST['submit'])){
+    if (isset($_POST['confSubmit'])){
         if(!empty($_POST[$pos_id])){
             echo "<br>Voted: <br>";
             $positions = $conn->query("SELECT * FROM candidate_position");
