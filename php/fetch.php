@@ -1,5 +1,4 @@
 <?php
-    include '../php/connect.php';
     // fetch template
     $positions = $conn->query("SELECT * FROM candidate_position"); // get positions
     while($poss = $positions->fetch_assoc()){   // loop through all positions
