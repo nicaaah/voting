@@ -26,6 +26,8 @@
                <?php
                     require 'php/connect.php';
                     require 'php/fetch.php';
+                    require 'php/confirm.php';
+                    require 'php/submit.php';
                 ?>
                 <a href="#">
                     <div id="vote-button"><button class="btn" >SUBMIT</button></div>
