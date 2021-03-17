@@ -1,17 +1,7 @@
 <?php
-
-    $all = $conn->query("SELECT * FROM ((candidate INNER JOIN student ON candidate.student_id = student.student_id) INNER JOIN candidate_position ON candidate.position_id = candidate_position.position_id)");
-
     // fetch template
-    // get positions
-    $ctr = 1;
-    while($row = $all->fetch_assoc()){   // loop through all positions
-        if($row["position_id"] == $ctr){
-            // echo opening tgs for position fivs
-        }
-            // insert candidates here
-        if()// echo closing tags for position divs here
-    }
+    $positions = $conn->query("SELECT * FROM candidate_position ORDER BY"); // get positions
+    while($poss = $positions->fetch_assoc()){   // loop through all positions
         // insert position div here
             echo' <div id="F-container">';
             echo '<a href="#" id="F-position" style="float: left;">'.$poss["position_name"].'</a><hr>';
