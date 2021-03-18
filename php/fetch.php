@@ -1,5 +1,4 @@
 <?php
-    include '../php/connect.php';
     // fetch template
     $positions = $conn->query("SELECT * FROM ((candidate INNER JOIN student ON candidate.student_id = student.student_id) INNER JOIN candidate_position ON candidate.position_id = candidate_position.position_id) ORDER BY candidate_position.heirarchy_id"); // get positions
     $heir_id = 0;
