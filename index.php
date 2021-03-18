@@ -26,7 +26,7 @@
                <?php
                     require 'php/connect.php';
                     require 'php/fetch.php';
-                    require 'php/confirm.php';
+                    // require 'php/confirm.php';
                     require 'php/submit.php';
                 ?>
                 <a href="#">
