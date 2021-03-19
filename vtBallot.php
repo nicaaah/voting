@@ -26,8 +26,8 @@
                <?php
                     require 'php/connect.php';
                     require 'php/vtFetch.php';
-                    // require 'php/confirm.php';
-                    require 'php/vtSubmit.php';
+                    // require 'php/vtConfirm.php';
+                    // require 'php/vtSubmit.php';
                 ?>
                 <a href="#">
                     <div id="vote-button"><button class="btn" >SUBMIT</button></div>
@@ -35,6 +35,7 @@
 
         </div>
      </main>
+     <br>
 
     <footer>
         <div class="footer">
