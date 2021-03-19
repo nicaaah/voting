@@ -28,28 +28,20 @@
 
                 <div class="row">
                     <div class="F-column left">
-                        <?php
-                        $positions = $conn->query("SELECT * FROM ((candidate INNER JOIN student ON candidate.student_id = student.student_id) INNER JOIN candidate_position ON candidate.position_id = candidate_position.position_id) ORDER BY candidate_position.heirarchy_id"); // get positions
-                        $heir_id = 0;
-                        echo'    <div>';
-                        while($poss = $positions->fetch_assoc()){   // loop through all positions
-                            // insert position div here
-                            $cand = $poss["heirarchy_id"];
-                            if($heir_id != $cand){
-                                $heir_id++;
-                                echo '<p><a href="#" id="F-Position">'.$poss["position_name"].' </a></p>';
-                            }
-                          }
-                        ?>
+                        <p><a href="#" id="F-Position">Position: </a></p>
+                        <p><a href="#" id="F-Position">Position: </a></p> 
+                        <p><a href="#" id="F-Position">Position: </a></p>  
+                        <p><a href="#" id="F-Position">Position: </a></p>
+                        <p><a href="#" id="F-Position">Position: </a></p>
+                        <p><a href="#" id="F-Position">Position: </a></p>
+                        <p><a href="#" id="F-Position">Position: </a></p>
                     </div>
                     <div class="F-column right">
-                      <?php 
-                        $choice = $_POST[$pos_id]; 
-                        $studd = $conn->query("SELECT * FROM candidate INNER JOIN student ON candidate.student_id = student.student_id  WHERE candidate_id = $choice"); // join candidate and student table ; search the student that was voted
-                        $stud = $studd->fetch_assoc();
-                        $choice = $stud["name"];            // get name of student
-                      ?>
                         <p><a href="#" id="F-CandidateName">Candidate Name</a></p>  
+                        <p><a href="#" id="F-CandidateName">Candidate Name</a></p>
+                        <p><a href="#" id="F-CandidateName">Candidate Name</a></p>
+                        <p><a href="#" id="F-CandidateName">Candidate Name</a></p>
+                        <p><a href="#" id="F-CandidateName">Candidate Name</a></p>
                         <p><a href="#" id="F-CandidateName">Candidate Name</a></p>
                         <p><a href="#" id="F-CandidateName">Candidate Name</a></p>
                         <br>
